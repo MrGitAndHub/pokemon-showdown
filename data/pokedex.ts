@@ -7423,7 +7423,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	staraptor: {
 		num: 398,
 		name: "Staraptor",
-		types: ["Normal", "Fire"],
+		types: ["Normal", "Flying"],
 		baseStats: { hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100 },
 		abilities: { 0: "Intimidate", H: "Reckless" },
 		heightm: 1.2,

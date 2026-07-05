@@ -434,12 +434,10 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	aeziolite: {
 		name: "Aeziolite",
 		spritenum: 628,
-		megaStone: "Aeziolu-Mega",
-		megaEvolves: "Aeziolu",
+		megaStone: { "Aeziolu": "Aeziolu-Mega" },
 		itemUser: ["Aeziolu"],
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
 		num: 770,
 		gen: 9,
