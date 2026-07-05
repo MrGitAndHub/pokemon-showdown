@@ -6250,4 +6250,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	aeziolu: {
+		tier: "LC",
+	},
+	aeziolumega: {
+		tier: "NFE",
+	},
 };
