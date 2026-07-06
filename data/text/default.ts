@@ -34,6 +34,7 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		megaGen6: "  [POKEMON]'s [ITEM] is reacting to [TRAINER]'s Mega Bracelet!",
 		transformMega: "[POKEMON] has Mega Evolved into Mega [SPECIES]!",
 		primal: "[POKEMON]'s Primal Reversion! It reverted to its primal state!",
+		potential: "[POKEMON]'s [ITEM] has given [POKEMON] a new form!",
 		zPower: "  [POKEMON] surrounded itself with its Z-Power!",
 		zBroken: "  [POKEMON] couldn't fully protect itself and got hurt!",
 		terastallize: "  [POKEMON] has Terastallized into the [TYPE]-type!", // filler

@@ -462,7 +462,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard Draft', 'Min Source Gen = 9'],
 	},
 	{
-		name: "[Champions] Aeziolu Draft",
+		name: "[Gen 9 Champions] Aeziolu Draft",
 		mod: 'aezioludraft',
 		searchShow: false,
 		teraPreviewDefault: true,
