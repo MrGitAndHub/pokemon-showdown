@@ -2559,6 +2559,34 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 315,
 		// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
 	},
+	eternalstorm: {
+		isNonstandard: "Future",
+		onWeatherModifyDamagePriority: 1,
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			(this.dex.conditions.getByID('raindance' as ID) as any).onWeatherModifyDamage
+				.call(this, damage, attacker, defender, move);
+			return damage; // fast exit from event
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Eternal Storm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Eternal Storm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Eternal Storm",
+		rating: 4,
+		num: 315,
+		// Partially implemented in Pokemon.effectiveWeather() in sim/pokemon.ts
+	},
 	merciless: {
 		onModifyCritRatio(critRatio, source, target) {
 			if (target && ['psn', 'tox'].includes(target.status)) return 5;
@@ -2733,6 +2761,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		flags: { breakable: 1 },
 		name: "Motor Drive",
+		rating: 3,
+		num: 78,
+	},
+	mentalfortitude: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Psychic') {
+				if (!this.boost({ atk: 1 })) {
+					this.add('-immune', target, '[from] ability: Mental Fortitude');
+				}
+				return null;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Mental Fortitude",
 		rating: 3,
 		num: 78,
 	},
@@ -2994,6 +3036,28 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Normalize",
 		rating: 0,
 		num: 96,
+	},
+	psychicflames: {
+		onModifyTypePriority: 1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'hiddenpower', 'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Fire' && !(move.isZ && move.category !== 'Status') &&
+				// TODO: Figure out actual interaction
+				(!noModifyType.includes(move.id) || this.activeMove?.isMax) && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Psychic';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Psychic Flames",
+		rating: 1,
+		num: -96,
 	},
 	oblivious: {
 		onUpdate(pokemon) {

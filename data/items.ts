@@ -821,6 +821,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
+	charizarditez: {
+		name: "Charizardite Z",
+		spritenum: 586,
+		megaStone: { "Charizard": "Charizard-Mega-Z" },
+		itemUser: ["Charizard"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 678,
+		gen: 9,
+		isNonstandard: "Past",
+	},
 	chartiberry: {
 		name: "Charti Berry",
 		spritenum: 62,
@@ -5190,6 +5202,63 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isPrimalOrb: true,
 		num: 534,
 		gen: 6,
+		isNonstandard: "Past",
+	},
+	charizarditemax: {
+		name: "Charizardite Max",
+		spritenum: 390,
+		onSwitchInPriority: -1,
+		onSwitchIn(pokemon) {
+			if (pokemon.isActive && pokemon.baseSpecies.name === 'Charizard' && !pokemon.transformed) {
+				pokemon.formeChange('Charizard-Brainiac', this.effect, true);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Charizard') return false;
+			return true;
+		},
+		itemUser: ["Charizard"],
+		isPrimalOrb: true,
+		num: 534,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	kilowattritemax: {
+		name: "Kilowattrite Max",
+		spritenum: 390,
+		onSwitchInPriority: -1,
+		onSwitchIn(pokemon) {
+			if (pokemon.isActive && pokemon.baseSpecies.name === 'Kilowattrel' && !pokemon.transformed) {
+				pokemon.formeChange('Kilowattrel-Stormy', this.effect, true);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Kilowattrel') return false;
+			return true;
+		},
+		itemUser: ["Kilowattrel"],
+		isPrimalOrb: true,
+		num: 534,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	glowkitemax: {
+		name: "Glowkite Max",
+		spritenum: 390,
+		onSwitchInPriority: -1,
+		onSwitchIn(pokemon) {
+			if (pokemon.isActive && pokemon.baseSpecies.name === 'Slowking-Galar' && !pokemon.transformed) {
+				pokemon.formeChange('Slowking-Fortitude', this.effect, true);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Slowking-Galar') return false;
+			return true;
+		},
+		itemUser: ["Slowking-Galar"],
+		isPrimalOrb: true,
+		num: 534,
+		gen: 9,
 		isNonstandard: "Past",
 	},
 	repeatball: {

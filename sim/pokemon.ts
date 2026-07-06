@@ -2201,6 +2201,12 @@ export class Pokemon {
 			if (weather !== 'sunnyday' && message) this.battle.add('-activate', this, 'ability: Mega Sol');
 			return 'sunnyday' as ID;
 		}
+		if (this.battle.activePokemon?.hasAbility('eternalstorm') && sourceEffect &&
+			(sourceEffect.id === 'eternalstorm' || sourceEffect.effectType === 'Move' || sourceEffect.effectType === 'Weather') &&
+			sourceEffect.id !== 'electroshot') {
+			if (weather !== 'raindance' && message) this.battle.add('-activate', this, 'ability: Eternal Storm');
+			return 'raindance' as ID;
+		}
 		switch (weather) {
 		case 'sunnyday':
 		case 'raindance':
