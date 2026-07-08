@@ -9328,16 +9328,14 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1 },
 		
-		onHit(attacker, defender, move)
+		onHit(target, source, move)
 		{
-			const item = attacker.getItem();
+			const item = source.getItem();
 
-			if (item.name === 'ThornRing') {
-				attacker.removeVolatile('mustrecharge');
-			}else{
-				attacker.addVolatile('mustrecharge', attacker);
+			if (item.name !== 'ThornRing') {
+				source.addVolatile('mustrecharge', source);
 			}
-
+			return null;
 		},
 
 		secondary: {
