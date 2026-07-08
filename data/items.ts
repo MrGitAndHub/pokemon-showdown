@@ -4728,6 +4728,27 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 1,
 		isPokeball: true,
 	},
+	thornring: {
+		name: "ThornRing",
+		spritenum: 4,
+		fling: {
+			basePower: 30,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ice') {
+				return this.chainModify(2);
+			}
+		},
+		onResidualOrder: 5,
+		onResidualSubOrder: 4,
+		onResidual(pokemon) {
+			this.damage(pokemon.baseMaxhp / 8);
+
+		},
+		num: 4,
+		gen: 9,
+	},
 	pomegberry: {
 		name: "Pomeg Berry",
 		spritenum: 351,
@@ -6264,6 +6285,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 752,
 		gen: 6,
+		isNonstandard: "Past",
+	},
+	swampertitez: {
+		name: "Swampertite Z",
+		spritenum: 612,
+		megaStone: { "Swampert": "Swampert-Mega-Z" },
+		itemUser: ["Swampert"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 752,
+		gen: 9,
 		isNonstandard: "Past",
 	},
 	sweetapple: {
