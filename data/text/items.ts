@@ -2632,4 +2632,24 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "ThornRing",
 		shortDesc: "Wearer takes damage from pain, Increases Ice Spells damage by 2x.",
 	},
+	charizarditemax: {
+		name: "Charizardite Max",
+		shortDesc: "If held by a Charizard, this item allows it to unlock its true potential in battle.",
+	},
+	kilowattritemax: {
+		name: "Kilowattrite Max",
+		shortDesc: "If held by a Kilowattrel, this item allows it to unlock its true potential in battle.",
+	},
+	glowkitemax: {
+		name: "Glowkite Max",
+		shortDesc: "If held by a Galarian Slowking, this item allows it to unlock its true potential in battle.",
+	},
+	charizarditez: {
+		name: "Charizardite Z",
+		shortDesc: "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard Z in battle.",
+	},
+	swampertitez: {
+		name: "Swampertite Z",
+		shortDesc: "If held by a Swampert, this item allows it to Mega Evolve into Mega Swampert Z in battle.",
+	},
 };
