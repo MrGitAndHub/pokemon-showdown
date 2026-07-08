@@ -29732,6 +29732,7 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			icebeam: ["9M", "8M", "7M", "6M", "5M", "4M", "3M"],
 			icepunch: ["9M", "8M", "7T", "7E", "7V", "6T", "6E", "5T", "5E", "5D", "4T", "4E", "3T"],
 			iceshard: ["9E", "8E", "7L47", "7E", "6L47", "6E", "5L47", "5E", "4L49", "4E"],
+			snowgrave: ["9E", "8E", "7L47", "7E", "6L47", "6E", "5L47", "5E", "4L49", "4E"],
 			iciclecrash: ["9E", "8E", "7E", "6E"],
 			iciclespear: ["9M"],
 			icywind: ["9M", "9L24", "8M", "8L24", "7T", "7L14", "7V", "6T", "6L14", "5T", "5L14", "4T", "4L28", "3T", "3L43"],

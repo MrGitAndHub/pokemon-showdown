@@ -9318,6 +9318,36 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ice",
 		contestType: "Beautiful",
 	},
+	snowgrave: {
+		num: 58,
+		accuracy: 100,
+		basePower: 140,
+		category: "Special",
+		name: "Snowgrave",
+		pp: 5,
+		priority: 0,
+		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1 },
+		
+		onHit(attacker, defender, move)
+		{
+			const item = attacker.getItem();
+
+			if (item.name === 'ThornRing') {
+				attacker.removeVolatile('mustrecharge');
+			}else{
+				attacker.addVolatile('mustrecharge', attacker);
+			}
+
+		},
+
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
+		target: "allAdjacent",
+		type: "Ice",
+		contestType: "Beautiful",
+	},
 	iceburn: {
 		num: 554,
 		accuracy: 90,

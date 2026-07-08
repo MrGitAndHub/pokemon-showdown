@@ -4736,16 +4736,29 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
+			
 			if (move.type === 'Ice') {
 				return this.chainModify(2);
 			}
+
+			//if(move.name === 'Snowgrave')
+			//{
+			//	if (!move.secondaries) move.secondaries = [];
+			//	
+			//	move.secondaries.push({
+			//		chance: 100,
+			//		volatileStatus: 'encore',
+			//	});
+			//
+			//} IDK if this uses /* */ take that with a grain of salt
 		},
+
 		onResidualOrder: 5,
 		onResidualSubOrder: 4,
 		onResidual(pokemon) {
 			this.damage(pokemon.baseMaxhp / 8);
-
 		},
+
 		num: 4,
 		gen: 9,
 	},

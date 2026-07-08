@@ -3272,6 +3272,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to freeze the target.",
 		shortDesc: "10% chance to freeze the target.",
 	},
+	snowgrave: {
+		name: "Snowgrave",
+		desc: "Deals the fatal damage to all of the enemies.",
+		shortDesc: "Fatal.",
+	},
 	iceburn: {
 		name: "Ice Burn",
 		desc: "Has a 30% chance to burn the target. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
