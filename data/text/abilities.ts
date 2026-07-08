@@ -2314,4 +2314,22 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+
+	//custom
+
+	psychicflames: {
+		name: "Psychic Flames",
+		desc: "This Pokemon's Fire-type moves become Psychic-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Fire-type moves become Psychic type and have 1.2x power.",
+	},
+	eternalstorm: {
+		name: "Eternal Storm",
+		shortDesc: "This Pokemon's moves are used as if the effects of Rain Dance were active.",
+	},
+	mentalfortitude: {
+		name: "Mental Fortitude",
+		desc: "This Pokemon is immune to Psychic-type moves and raises its Attack by 1 stage when hit by an Psychic-type move.",
+		shortDesc: "This Pokemon's Attack is raised 1 stage if hit by an Psychic move; Psychic immunity.",
+	},
+
 };

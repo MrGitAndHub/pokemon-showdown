@@ -2556,10 +2556,7 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Zygardite",
 		shortDesc: "If held by a Zygarde in Complete Forme, this item allows it to Mega Evolve in battle.",
 	},
-	thornring: {
-		name: "ThornRing",
-		shortDesc: "Wearer takes damage from pain, Increases Ice Spells damage by 2x.",
-	},
+	
 
 	// Gen 2 items
 
@@ -2627,5 +2624,12 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 	vilevial: {
 		name: "Vile Vial",
 		shortDesc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
+	},
+
+	//custom
+
+	thornring: {
+		name: "ThornRing",
+		shortDesc: "Wearer takes damage from pain, Increases Ice Spells damage by 2x.",
 	},
 };

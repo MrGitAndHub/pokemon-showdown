@@ -9318,34 +9318,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Ice",
 		contestType: "Beautiful",
 	},
-	snowgrave: {
-		num: 58,
-		accuracy: 100,
-		basePower: 140,
-		category: "Special",
-		name: "Snowgrave",
-		pp: 5,
-		priority: 0,
-		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1 },
-		
-		onHit(target, source, move)
-		{
-			const item = source.getItem();
-
-			if (item.name !== 'ThornRing') {
-				source.addVolatile('mustrecharge', source);
-			}
-			return null;
-		},
-
-		secondary: {
-			chance: 10,
-			status: 'frz',
-		},
-		target: "allAdjacent",
-		type: "Ice",
-		contestType: "Beautiful",
-	},
+	
 	iceburn: {
 		num: 554,
 		accuracy: 90,
@@ -21337,6 +21310,37 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 		target: "allAdjacentFoes",
 		type: "Fire",
+		contestType: "Beautiful",
+	},
+
+	//custom
+
+	snowgrave: {
+		num: 58,
+		accuracy: 100,
+		basePower: 140,
+		category: "Special",
+		name: "Snowgrave",
+		pp: 5,
+		priority: 0,
+		flags: { recharge: 1, protect: 1, mirror: 1, metronome: 1 },
+		
+		onHit(target, source, move)
+		{
+			const item = source.getItem();
+
+			if (item.name !== 'ThornRing') {
+				source.addVolatile('mustrecharge', source);
+			}
+			return null;
+		},
+
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+		target: "allAdjacent",
+		type: "Ice",
 		contestType: "Beautiful",
 	},
 };
