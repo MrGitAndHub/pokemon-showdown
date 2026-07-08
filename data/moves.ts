@@ -9339,7 +9339,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		},
 
 		secondary: {
-			chance: 20,
+			chance: 10,
 			status: 'frz',
 		},
 		target: "allAdjacent",
