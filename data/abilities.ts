@@ -5765,4 +5765,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 78,
 	},
+
+	darkraisaura: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.hp >= target.maxhp) {
+				this.debug("Darkrai's Aura weakened");
+				this.add('-activate', target, "ability: Darkrai's Aura");
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {},
+		name: "Darkrai's Aura",
+		rating: 3.5,
+		num: 231,
+	},
 };

@@ -2331,5 +2331,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon is immune to Psychic-type moves and raises its Attack by 1 stage when hit by an Psychic-type move.",
 		shortDesc: "This Pokemon's Attack is raised 1 stage if hit by an Psychic move; Psychic immunity.",
 	},
+	darkraisaura: {
+		name: "Darkrai's Aura",
+		shortDesc: "If this Pokemon is at full HP, damage taken from attacks is halved.",
+	},
 
 };
