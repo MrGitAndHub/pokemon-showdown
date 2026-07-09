@@ -60,6 +60,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 	},
+	battlebond: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	naturalcure: {
 		inherit: true,
 		onCheckShow: undefined, // no inherit
@@ -96,5 +100,24 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		inherit: true,
 		shortDesc: "This Pokemon's contact moves ignore a target's protection and deal 1/4 the usual damage.",
+	},
+
+	//custom
+
+	psychicflames: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eternalstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mentalfortitude: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	darkraisaura: {
+		inherit: true,
+		isNonstandard: null,
 	},
 };

@@ -5080,4 +5080,25 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	pecharunt: {
 		tier: "OU",
 	},
+	aeziolu: {
+		tier: "OU"
+	},
+	aeziolumega: {
+		tier: "OU"
+	},
+	charizardmegaz: {
+		tier: "OU"
+	},
+	swampertmegaz: {
+		tier: "OU"
+	},
+	charizardbrainiac: {
+		tier: "OU"
+	},
+	kilowattrelstormy: {
+		tier: "OU"
+	},
+	slowkingfortitude: {
+		tier: "OU"
+	},
 };

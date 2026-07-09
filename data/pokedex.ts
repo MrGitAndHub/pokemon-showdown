@@ -14520,7 +14520,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		name: "Golisopod",
 		types: ["Bug", "Water"],
 		baseStats: { hp: 75, atk: 125, def: 140, spa: 60, spd: 90, spe: 40 },
-		abilities: { 0: "Emergency Exit" },
+		abilities: { 0: "Darkrai's Aura" },
 		heightm: 2,
 		weightkg: 108,
 		color: "Gray",

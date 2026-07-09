@@ -8231,6 +8231,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 4,
 		gen: 9,
 	},
+
+	//custom - mega-esc stones
+
 	charizarditemax: {
 		name: "Charizardite Max",
 		spritenum: 390,
