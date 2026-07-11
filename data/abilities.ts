@@ -4069,26 +4069,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 208,
 	},
-	scrappy: {
-		onModifyMovePriority: -5,
-		onModifyMove(move) {
-			if (!move.ignoreImmunity) move.ignoreImmunity = {};
-			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Fighting'] = true;
-				move.ignoreImmunity['Normal'] = true;
-			}
-		},
-		onTryBoost(boost, target, source, effect) {
-			if (effect.name === 'Intimidate' && boost.atk) {
-				delete boost.atk;
-				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Scrappy', `[of] ${target}`);
-			}
-		},
-		flags: {},
-		name: "Scrappy",
-		rating: 3,
-		num: 113,
-	},
 	screencleaner: {
 		onStart(pokemon) {
 			let activated = false;
@@ -5778,5 +5758,72 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Darkrai's Aura",
 		rating: 3.5,
 		num: 231,
+	},
+	
+	necrotize: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && (!noModifyType.includes(move.id) || this.activeMove?.isMax) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				this.add('-activate', pokemon, "ability: Necrotize");
+				move.type = 'Ghost';
+				move.typeChangerBoosted = this.effect;	
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Necrotize",
+		rating: 4,
+		num: 206,
+	},
+
+	inversescrappy: {
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Ghost'] = true;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (effect.name === 'Intimidate' && boost.atk) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inverse Scrappy', `[of] ${target}`);
+			}
+		},
+		flags: {},
+		name: "Inverse Scrappy",
+		rating: 3,
+		num: 113,
+	},
+	waterworks: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Waterworks boost');
+				this.add('-activate', defender, "ability: Waterworks");
+
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Waterworks boost');
+				this.add('-activate', defender, "ability: Waterworks");
+
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Waterworks",
+		rating: 3.5,
+		num: 200,
 	},
 };

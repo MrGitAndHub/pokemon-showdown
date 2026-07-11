@@ -2335,5 +2335,19 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Darkrai's Aura",
 		shortDesc: "If this Pokemon is at full HP, damage taken from attacks is halved.",
 	},
+	necrotize: {
+		name: "Necrotize",
+		desc: "This Pokemon's Normal-type moves become Ghost-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Ghost type and have 1.2x power.",
+	},
+	inversescrappy: {
+		name: "Inverse Scrappy",
+		desc: "This Pokemon can hit Normal types with Ghost-type moves. This Pokemon is immune to the effect of the Intimidate Ability.",
+		shortDesc: "Ghost moves hit Normal. Immune to Intimidate.",
+	},
+	waterworks: {
+		name: "Waterworks",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Water-type attack.",
+	},
 
 };
