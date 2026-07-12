@@ -8315,4 +8315,96 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 9,
 		isNonstandard: "Past",
 	},
+
+	// testing
+
+	absolites: {
+		name: "Absolite S",
+		spritenum: 499,
+		megaStone: { "Absol": "Absol-Mega-S" },
+		itemUser: ["Absol"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2638,
+		gen: 9,
+		isNonstandard: "Future",
+	},
+	absolitei: {
+		name: "Absolite I",
+		spritenum: 499,
+		megaStone: { "Absol": "Absol-Mega-I" },
+		itemUser: ["Absol"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2638,
+		gen: 9,
+		isNonstandard: "Future",
+	},
+
+	garchompitel: {
+		name: "Garchompite L",
+		spritenum: 501,
+		megaStone: { "Garchomp": "Garchomp-Mega-L" },
+		itemUser: ["Garchomp"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2640,
+		gen: 9,
+		isNonstandard: "Future",
+	},
+
+	lucarionitem: {
+		name: "Lucarionite M",
+		spritenum: 502,
+		megaStone: { "Lucario": "Lucario-Mega-M" },
+		itemUser: ["Lucario"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2641,
+		gen: 9,
+		isNonstandard: "Future",
+	},
+
+	darkraniteneuro: {
+		name: "Darkranite Neuro",
+		spritenum: 504,
+		megaStone: { "Darkrai": "Darkrai-Mega-Neuro" },
+		itemUser: ["Darkrai"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2568,
+		gen: 9,
+		isNonstandard: "Future",
+	},
+
+	golisopitet: {
+		name: "Golisopite T",
+		spritenum: 508,
+		megaStone: { "Golisopod": "Golisopod-Mega-T" },
+		itemUser: ["Golisopod"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2645,
+		gen: 9,
+		isNonstandard: "Future",
+	},
+
+	zeraoritei: {
+		name: "Zeraorite I",
+		spritenum: 510,
+		megaStone: { "Zeraora": "Zeraora-Mega-I" },
+		itemUser: ["Zeraora"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 2586,
+		gen: 9,
+		isNonstandard: "Future",
+	},
 };
