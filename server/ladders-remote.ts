@@ -119,7 +119,7 @@ export class LadderStore {
 			room.update();
 			problem = true;
 		} else if (data.errorip) {
-			room.add(`|error|Use the "Download Replay" option to save this replay.`);
+			room.add(`|error|Use the <strong>"Download Replay"<strong> option to save this replay.`);
 			room.add(`|error|You should be using ladders.js and not ladders-remote.js for ladder tracking.`);
 			room.update();
 			problem = true;
