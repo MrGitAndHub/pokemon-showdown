@@ -120,4 +120,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 	},
+	waterworks: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

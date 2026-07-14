@@ -5807,7 +5807,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Water') {
 				this.debug('Waterworks boost');
-				this.add('-activate', defender, "ability: Waterworks");
+				this.add('-activate', attacker, "ability: Waterworks");
 
 				return this.chainModify(1.5);
 			}
@@ -5816,7 +5816,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Water') {
 				this.debug('Waterworks boost');
-				this.add('-activate', defender, "ability: Waterworks");
+				this.add('-activate', attacker, "ability: Waterworks");
 
 				return this.chainModify(1.5);
 			}

@@ -1148,4 +1148,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+
+	//custom
+
+	snowgrave: {
+		inherit: true,
+	},
 };

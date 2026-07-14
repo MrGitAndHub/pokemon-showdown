@@ -1048,27 +1048,21 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	
 	thornring: {
 		inherit: true,
-		isNonstandard: "Past",
 	},
 	charizarditemax: {
 		inherit: true,
-		isNonstandard: "Past",
 	},
 	kilowattritemax: {
 		inherit: true,
-		isNonstandard: "Past",
 	},
 	glowkitemax: {
 		inherit: true,
-		isNonstandard: "Past",
 	},
 	charizarditez: {
 		inherit: true,
-		isNonstandard: "Past",
 	},
 	swampertitez: {
 		inherit: true,
-		isNonstandard: "Past",
 	},
 
 };
