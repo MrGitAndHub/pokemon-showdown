@@ -431,18 +431,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
-	aeziolite: {
-		name: "Aeziolite",
-		spritenum: 628,
-		megaStone: { "Aeziolu": "Aeziolu-Mega" },
-		itemUser: ["Aeziolu"],
-		onTakeItem(item, source) {
-			return !item.megaStone?.[source.baseSpecies.baseSpecies];
-		},
-		num: 770,
-		gen: 9,
-		isNonstandard: "Past",
-	},
 	belueberry: {
 		name: "Belue Berry",
 		spritenum: 21,
@@ -8234,6 +8222,28 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 
 	//custom - mega-esc stones
 
+	aeziolite: {
+		name: "Aeziolite",
+		spritenum: 628,
+		megaStone: { "Aeziolu": "Aeziolu-Mega" },
+		itemUser: ["Aeziolu"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 770,
+		gen: 9,
+	},
+	aeziolitez: {
+		name: "Aeziolite Z",
+		spritenum: 628,
+		megaStone: { "Aeziolu": "Aeziolu-Mega-Z" },
+		itemUser: ["Aeziolu"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: 770,
+		gen: 9,
+	},
 	charizarditemax: {
 		name: "Charizardite Max",
 		spritenum: 390,
@@ -8251,7 +8261,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isPrimalOrb: true,
 		num: 534,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	kilowattritemax: {
 		name: "Kilowattrite Max",
@@ -8270,7 +8279,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isPrimalOrb: true,
 		num: 534,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	glowkitemax: {
 		name: "Glowkite Max",
@@ -8289,7 +8297,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		isPrimalOrb: true,
 		num: 534,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	charizarditez: {
 		name: "Charizardite Z",
@@ -8301,7 +8308,6 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 678,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 	swampertitez: {
 		name: "Swampertite Z",
@@ -8313,10 +8319,9 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 752,
 		gen: 9,
-		isNonstandard: "Past",
 	},
 
-	// testing
+	// testing megas
 
 	absolites: {
 		name: "Absolite S",

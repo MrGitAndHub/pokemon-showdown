@@ -3767,10 +3767,33 @@ export const PokedexText: { [id: IDEntry]: PokedexText } = {
 	pokestarufopropu2: {
 		name: "Pokestar UFO-PropU2",
 	},
+
+	//custom
+
 	aeziolu: {
 		name: "Aeziolu"
 	}, 
+	mamoswinekanto: {
+		name: "Mamoswine-Kanto"
+	}, 
+
 	aeziolumega: {
 		name: "Aeziolu-Mega"
-	}, 
+	},
+	charizardmegaz:{
+		name: "Charizard-Mega-Z"
+	},
+	swampertmegaz:{
+		name: "Swampert-Mega-Z"
+	},
+
+	charizardbrainiac:{
+		name: "Charizard-Brainiac"
+	},
+	kilowattrelstormy:{
+		name: "Kilowattrel-Stormy"
+	},
+	slowkingfortitude:{
+		name: "Slowking-Fortitude"
+	},
 };
