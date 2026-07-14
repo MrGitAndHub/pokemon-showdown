@@ -2121,7 +2121,7 @@ export class GameRoom extends BasicRoom {
 			password,
 		});
 		if (result?.errorip) {
-			connection?.popup(`This server's request IP ${result.errorip} is not a registered server.`);
+			connection?.popup(`Use the "Download Replay" option to save this replay.`);
 			return;
 		}
 
