@@ -421,6 +421,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			console.log(`Worker ${PM.workerid} now listening for SSL on port ${config.ssl.port}`);
 		}
 
+		console.log("I'm so tired");
 		console.log(`Test your server at http://${config.bindaddress === '0.0.0.0' ? 'localhost' : config.bindaddress}:${config.port}`);
 	}
 
