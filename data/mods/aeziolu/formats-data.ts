@@ -4660,6 +4660,30 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	tier: "OU",	
 	},
 
+	//the bullshit
+
+	absolmegas: {
+	tier: "LC",	
+	},
+	absolmegai: {
+	tier: "LC",	
+	},
+	garchompmegal: {
+	tier: "LC",	
+	},
+	lucariomegam: {
+	tier: "LC",	
+	},
+	darkraimegan: {
+	tier: "LC",	
+	},
+	golisopodmegat: {
+	tier: "LC",	
+	},
+	zeraoramegai: {
+	tier: "LC",	
+	},
+	
 	//random bullshit
 
 	aeziolu: {

@@ -21203,7 +21203,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	//Testing
 
 	
-	absolmegay: {
+	absolmegas: {
 		num: 359,
 		name: "Absol-Mega-S",
 		baseSpecies: "Absol",
@@ -21218,7 +21218,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		requiredItem: "Absolite Z",
 		gen: 9,
 	},
-	absolmegax: {
+	absolmegai: {
 		num: 359,
 		name: "Absol-Mega-I",
 		baseSpecies: "Absol",

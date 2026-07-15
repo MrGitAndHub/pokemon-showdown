@@ -1046,6 +1046,44 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 
 	//custom
 
+	absolitez: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	garchompitez: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lucarionitez: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	absolites: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	absolitei: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	garchompitel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lucarionitem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	darkraniteneuro: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	golisopitet: {
+		inherit: true,
+		isNonstandard: null,
+	},
+
+
 	thornring: {
 		inherit: true,
 		isNonstandard: null,
