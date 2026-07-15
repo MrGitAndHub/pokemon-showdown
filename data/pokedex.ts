@@ -21267,7 +21267,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		gen: 9,
 	},
 
-	darkraimegan: {
+	darkraimeganeuro: {
 		num: 491,
 		name: "Darkrai-Mega-Neuro",
 		baseSpecies: "Darkrai",
