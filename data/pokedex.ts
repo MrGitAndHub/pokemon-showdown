@@ -18720,7 +18720,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		forme: "Stretchy",
 		types: ["Dragon", "Water"],
 		baseStats: { hp: 68, atk: 50, def: 60, spa: 120, spd: 95, spe: 82 },
-		abilities: { 0: "Eternal Storm" },
+		abilities: { 0: "Commander", H: "Storm Drain" },
 		heightm: 0.3,
 		weightkg: 8,
 		color: "Yellow",
