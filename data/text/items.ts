@@ -2632,6 +2632,24 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "ThornRing",
 		shortDesc: "Wearer takes damage from pain, Increases Ice Spells damage by 2x.",
 	},
+	gholdenizer: {
+		name: "Gholdenizer",
+		shortDesc: "If held by any pokemon, it will transform it into a Gholdengo.",
+	},
+	raincharm: {
+		name: "Rain Charm",
+		shortDesc: "Holder gets blessed with Rain for 5 turns. Single use.",
+	},
+	holymantle:{
+		name: "Holy Mantle",
+		shortDesc: "4th tier item. Protects the holder from 1 hit.",
+
+		start: "  [POKEMON] shines brightly with its Holy Mantle!",
+		end: "  [POKEMON]'s Holy Mantle was used up!",
+	},
+
+	//Custom Mega
+
 	charizarditemax: {
 		name: "Charizardite Max",
 		shortDesc: "If held by a Charizard, this item allows it to unlock its true potential in battle.",
@@ -2652,4 +2670,5 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Swampertite Z",
 		shortDesc: "If held by a Swampert, this item allows it to Mega Evolve into Mega Swampert Z in battle.",
 	},
+	
 };

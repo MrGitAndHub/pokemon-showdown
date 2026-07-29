@@ -1,3 +1,5 @@
+import { Pokedex } from './pokedex';
+
 export const Items: import('../sim/dex-items').ItemDataTable = {
 	abilityshield: {
 		name: "Ability Shield",
@@ -8219,6 +8221,58 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 4,
 		gen: 9,
 	},
+	gholdenizer: {
+		name: "Gholdenizer",
+		spritenum: 390,
+		onSwitchInPriority: -1,
+		onSwitchIn(pokemon) {
+			if (pokemon.isActive && !pokemon.transformed && pokemon.baseSpecies.baseSpecies!='Gholdengo') {
+				pokemon.formeChange('Gholdengo', this.effect, true, '0', '[msg]');
+			}
+		},
+		onResidual(pokemon) {
+			if (pokemon.isActive && !pokemon.transformed && pokemon.baseSpecies.baseSpecies!='Gholdengo') {
+				pokemon.formeChange('Gholdengo', this.effect, true, '0', '[msg]');
+			}
+		},
+		onTakeItem() {
+			return true;
+		},
+		num: 534,
+		gen: 9,
+	},
+	raincharm:
+	{
+		name: "Rain Charm",
+		onSwitchIn(pokemon) {
+			if (pokemon.species.abilities[0] == 'Drizzle' || pokemon.species.abilities[1] == 'Drizzle') return;
+			if(this.field.weather == 'rain') return;
+			this.field.setWeather('raindance');
+			pokemon.useItem();
+		},
+		spritenum: 661,
+		num: 851,
+		gen: 9,
+	},
+	holymantle:
+	{
+		name: "Holy Mantle",
+		onStart(target) {
+			if (!target.ignoringItem()) {
+				this.add('-item', target , 'Holy Mantle');
+			}
+		},
+
+		onDamage(damage, target, source, effect) {
+			//this.add('-enditem', target, 'Holy Mantle');
+			target.useItem();
+			return 0;
+		},
+
+		spritenum: 661,
+		num: 851,
+		gen: 9,
+	},
 
 	//custom - mega-esc stones
 
@@ -8320,6 +8374,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 752,
 		gen: 9,
 	},
+	
 
 	// testing megas
 
