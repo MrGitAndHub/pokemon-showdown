@@ -18763,7 +18763,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		forme: "Stretchy-Mega",
 		types: ["Dragon", "Water"],
 		baseStats: { hp: 68, atk: 65, def: 90, spa: 135, spd: 125, spe: 92 },
-		abilities: { 0: "Supreme Overlord"},
+		abilities: { 0: "Swift Swim"},
 		heightm: 0.3,
 		weightkg: 24,
 		color: "Yellow",
