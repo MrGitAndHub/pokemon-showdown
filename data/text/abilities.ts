@@ -2349,5 +2349,9 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Waterworks",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Water-type attack.",
 	},
+	dragonsfrock: {
+		name: "Dragon's Frock",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.3 while using a Dragon-type attack.",
+	},
 
 };

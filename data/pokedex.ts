@@ -8189,7 +8189,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		forme: "Mega-Z",
 		types: ["Dragon"],
 		baseStats: { hp: 108, atk: 130, def: 85, spa: 141, spd: 85, spe: 151 },
-		abilities: { 0: "Dragon's Maw" },
+		abilities: { 0: "Dragon's Frock" },
 		heightm: 1.9,
 		weightkg: 99,
 		color: "Blue",

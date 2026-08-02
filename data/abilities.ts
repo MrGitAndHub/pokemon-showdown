@@ -5826,4 +5826,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 200,
 	},
+	dragonsfrock: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dragon') {
+				this.debug('Dragon\'s Frock boost');
+				this.add('-activate', attacker, "ability: Dragon's Frock");
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dragon') {
+				this.debug('Dragon\'s Frock boost');
+				this.add('-activate', attacker, "ability: Dragon's Frock");
+				return this.chainModify(1.3);
+			}
+		},
+		flags: {},
+		name: "Dragon's Frock",
+		rating: 3.5,
+		num: 263,
+	},
 };
