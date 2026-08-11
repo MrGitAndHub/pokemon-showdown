@@ -96,7 +96,7 @@ const SPEED_SETUP = [
 const SETUP = [
 	'acidarmor', 'agility', 'autotomize', 'bellydrum', 'bulkup', 'calmmind', 'clangoroussoul', 'coil', 'cosmicpower', 'curse', 'dragondance',
 	'flamecharge', 'growth', 'honeclaws', 'howl', 'irondefense', 'meditate', 'nastyplot', 'noretreat', 'poweruppunch', 'quiverdance',
-	'rockpolish', 'shellsmash', 'shiftgear', 'swordsdance', 'tailglow', 'takeheart', 'tidyup', 'trailblaze', 'workup', 'victorydance',
+	'rockpolish', 'shellsmash', 'shelter', 'shiftgear', 'swordsdance', 'tailglow', 'takeheart', 'tidyup', 'trailblaze', 'workup', 'victorydance',
 ];
 const SPEED_CONTROL = [
 	'electroweb', 'glare', 'icywind', 'lowsweep', 'nuzzle', 'quash', 'tailwind', 'thunderwave', 'trickroom',
@@ -1700,8 +1700,8 @@ export class RandomTeams {
 			[sandSetters, snowSetters],
 
 			// Prevent conflicting terrain abilities from generating together
-			[['pincurchin', 'miraidon'], ['indeedee', 'indeedeef', 'rillaboom']],
-			['rillaboom', ['indeedee', 'indeedeef']],
+			[['pincurchin', 'miraidon'], ['indeedee', 'indeedeef', 'rillaboom', 'arboliva']],
+			[['rillaboom', 'arboliva'], ['indeedee', 'indeedeef']],
 		];
 
 		const incompatibilityList = isDoubles ? doublesIncompatiblePokemon : incompatiblePokemon;
@@ -1736,8 +1736,8 @@ export class RandomTeams {
 		const type = this.forceMonotype || this.sample(typePool);
 
 		// PotD stuff
-		const usePotD = global.Config && Config.potd && ruleTable.has('potd');
-		const potd = usePotD ? this.dex.species.get(Config.potd) : null;
+		const potdName = (ruleTable.has('potd') && global.Config?.potd) || null;
+		const potd = potdName ? this.dex.species.get(potdName) : null;
 
 		const baseFormes: { [k: string]: number } = {};
 
